@@ -9,6 +9,9 @@ import {
   IonCardTitle,
   IonCardContent,
   IonButton,
+  IonInput, 
+  IonItem, 
+  IonList
 } from "@ionic/react";
 
 const Contact: React.FC = () => {
@@ -25,11 +28,20 @@ const Contact: React.FC = () => {
             <IonCardTitle>GET IN TOUCH 📞</IonCardTitle>
           </IonCardHeader>
           <IonCardContent>
-            <p>This is just an example for the contact page!</p>
-            <p>
-              You can customize this page to include a contact form, email
-              details, or even social media links.
-            </p>
+            <IonList>
+                <IonItem>
+                    <IonInput placeholder="Your Name" />
+                </IonItem>
+                <IonItem>
+                    <IonInput placeholder="Your Email" type="email" />
+                </IonItem>
+                <IonItem>
+                    <IonInput placeholder="Your Message" />
+                </IonItem>
+            </IonList>
+            <IonButton expand="block" color="secondary">
+              Submit
+            </IonButton>
             <IonButton routerLink="/home" expand="block" color="secondary">
               Go Back Home
             </IonButton>
