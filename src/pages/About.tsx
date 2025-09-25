@@ -1,8 +1,5 @@
 import {
   IonPage,
-  IonHeader,
-  IonToolbar,
-  IonTitle,
   IonContent,
   IonCard,
   IonCardHeader,
@@ -10,41 +7,33 @@ import {
   IonCardContent,
   IonButton,
 } from '@ionic/react';
+import "./About.css"
 
 const About: React.FC = () => {
   return (
     <IonPage>
-      {/* Page Header */}
-      <IonHeader>
-        <IonToolbar color="primary">
-          <IonTitle>About Us</IonTitle>
-        </IonToolbar>
-      </IonHeader>
-
-      {/* Page Content */}
-      <IonContent className="ion-padding">
-
+      <IonContent>
+        <div className="page">
         {/* Card Section */}
-        <IonCard>
+        <IonCard className="aboutcard">
           <IonCardHeader>
-            <IonCardTitle>Welcome 🚀</IonCardTitle>
+            <IonCardTitle className="title">Welcome 🚀</IonCardTitle>
           </IonCardHeader>
           <IonCardContent>
             <p>
               This is a demo Ionic React app. It shows how to create pages,
               navigate between them, and style using Ionic components.
             </p>
-            <p>
-              You can fully customize this page to include your team info,
-              app purpose, or even links to external resources.
-            </p>
 
             {/* Button back to home */}
-            <IonButton routerLink="/home" expand="block" color="secondary">
+            <IonButton routerLink="/home" className="button" color="none">
               Go Back Home
             </IonButton>
           </IonCardContent>
         </IonCard>
+
+          
+        </div>
 
       </IonContent>
     </IonPage>

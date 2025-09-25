@@ -1,9 +1,6 @@
 import {
   IonContent,
   IonPage,
-  IonHeader,
-  IonToolbar,
-  IonTitle,
   IonCard,
   IonCardHeader,
   IonCardTitle,
@@ -11,21 +8,19 @@ import {
   IonButton,
   IonInput, 
   IonItem, 
-  IonList
+  IonList,
+  IonTextarea
 } from "@ionic/react";
+import "./Contact.css"
 
 const Contact: React.FC = () => {
   return (
     <IonPage>
-      <IonHeader>
-        <IonToolbar color="primary">
-          <IonTitle>Contact Form</IonTitle>
-        </IonToolbar>
-      </IonHeader>
-      <IonContent className="ion-padding">
-        <IonCard>
+      <IonContent>
+        <div className="page">
+        <IonCard className="contactcard">
           <IonCardHeader>
-            <IonCardTitle>GET IN TOUCH 📞</IonCardTitle>
+            <IonCardTitle className="title">GET IN TOUCH 📞</IonCardTitle>
           </IonCardHeader>
           <IonCardContent>
             <IonList>
@@ -36,17 +31,18 @@ const Contact: React.FC = () => {
                     <IonInput placeholder="Your Email" type="email" />
                 </IonItem>
                 <IonItem>
-                    <IonInput placeholder="Your Message" />
+                    <IonTextarea placeholder="Your Message" className="contactmessage"/>
                 </IonItem>
             </IonList>
-            <IonButton expand="block" color="secondary">
+            <IonButton className="submitbutton" color="none">
               Submit
             </IonButton>
-            <IonButton routerLink="/home" expand="block" color="secondary">
+            <IonButton routerLink="/home" className="button" color="none">
               Go Back Home
             </IonButton>
           </IonCardContent>
         </IonCard>
+        </div>
       </IonContent>
     </IonPage>
   );
